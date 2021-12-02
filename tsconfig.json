@@ -1,5 +1,4 @@
 {
-  "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
@@ -13,5 +12,6 @@
     "sourceMap": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": ["src", "tests"]
 }
