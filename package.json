@@ -1,0 +1,23 @@
+{
+  "name": "clean_arch_typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Paulo Alexandre Mello <palexandremello@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/main/api",
+    "build": "rimraf dist && yarn tsc"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.11.11",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2",
+    "rimraf": "^3.0.2"
+  }
+}
