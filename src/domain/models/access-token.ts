@@ -1,5 +1,5 @@
 export class AccessToken {
-  constructor (private readonly value: string) {}
+  constructor (public readonly value: string) {}
 
   static get expirationInMs (): number {
     const minutes = 30
