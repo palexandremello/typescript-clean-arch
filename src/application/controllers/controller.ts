@@ -13,7 +13,6 @@ export abstract class Controller {
     if (error !== undefined) {
       return badRequest(error)
     }
-
     try {
       return await this.perfom(httpRequest)
     } catch (error: any) {
