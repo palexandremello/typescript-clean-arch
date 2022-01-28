@@ -10,7 +10,7 @@ class ExpressRouter {
     if (httpResponse.statusCode === 200) {
       response.status(200).json(httpResponse.data)
     } else {
-      response.status(400).json({ error: httpResponse.data.message })
+      response.status(httpResponse.statusCode).json({ error: httpResponse.data.message })
     }
   }
 }
