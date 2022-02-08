@@ -5,8 +5,8 @@
   "author": "Paulo Alexandre Mello <palexandremello@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/main/api",
-    "build": "rimraf dist && yarn tsc -p tsconfig-build.json",
+    "start": "yarn build && node dist/main",
+    "build": "tsc -p tsconfig-build.json",
     "lint": "eslint .",
     "lint:fix": "yarn lint -- --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
