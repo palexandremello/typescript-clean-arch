@@ -12,14 +12,18 @@ class AuthenticationMiddleware {
   constructor (private readonly authorize: Authorize) {}
 
   async handle ({ authorization }: HttpRequest): Promise<HttpResponse<Model>> {
-    const error = new RequiredStringValidator(authorization, 'authorization').validate()
-    if (error !== undefined) return forbiddenError()
+    if (!this.validate({ authorization })) return forbiddenError()
     try {
       const userId = await this.authorize({ token: authorization })
       return ok({ userId })
     } catch {
       return forbiddenError()
     }
+  }
+
+  private validate ({ authorization }: HttpRequest): boolean {
+    const error = new RequiredStringValidator(authorization, 'authorization').validate()
+    return error === undefined
   }
 }
 
