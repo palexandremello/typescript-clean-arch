@@ -1,9 +1,0 @@
-{
-    "type": "postgres",
-    "host": "kesavan.db.elephantsql.com",
-    "port": 5432,
-    "username": "klidlpgs",
-    "password": "JaN4FfnbEN-um9LWdaXG7urXIgbisfcG",
-    "database": "klidlpgs",
-    "entities": ["dist/infra/postgres/entities/index.js"]
-}
